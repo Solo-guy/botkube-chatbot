@@ -1,0 +1,58 @@
+# Plugin directory .gitignore
+# -----------------------
+
+# Executables and binaries
+*/bin/
+**/*.exe
+**/*.exe~
+**/debug
+**/release
+
+# Go specific
+vendor/
+go.work
+go.work.sum
+**/*.test
+**/*.out
+**/tmp/
+
+# Environment files
+**/.env
+**/.env.local
+**/.env.development
+**/.env.test
+**/.env.production
+
+# Temporary files
+**/tmp/
+**/temp/
+**/*.tmp
+**/*.bak
+
+# IDE specific
+**/*.iml
+**/.idea/
+**/.vscode/
+**/.cursor/
+
+# Plugin-specific binaries
+# AI Manager specific
+ai-manager/ai-manager
+ai-manager/ai-manager.exe
+ai-manager/.env
+
+# Flutter Executor specific  
+flutter-executor/flutter-executor
+flutter-executor/flutter-executor.exe
+flutter-executor/.env
+
+# Log files
+**/*.log
+**/logs/
+
+# Database related
+**/cockroach-data/
+**/cockroach-temp*/
+
+# Don't ignore
+!**/.gitkeep 

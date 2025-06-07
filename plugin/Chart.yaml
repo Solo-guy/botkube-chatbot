@@ -1,0 +1,6 @@
+      apiVersion: v2
+      name: botkube-flutter
+      description: Helm chart cho plugin flutter-executor và ai-manager của Botkube
+      type: application
+      version: 0.1.0
+      appVersion: "1.0"

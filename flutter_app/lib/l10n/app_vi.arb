@@ -1,0 +1,21 @@
+{
+        "@@locale": "vi",
+        "appTitle": "Botkube",
+        "enterCommand": "Nhập lệnh...",
+        "send": "Gửi",
+        "enterUsername": "Nhập tên người dùng...",
+        "login": "Đăng nhập",
+        "calculateAICost": "Tính chi phí AI",
+        "workflowPlaceholder": "Workflow, file hoặc thông tin từ AI sẽ hiển thị ở đây",
+        "requestAIAnalysis": "Yêu cầu phân tích AI",
+        "aiResult": "Kết quả phân tích từ AI",
+        "viewHistory": "Xem lịch sử chat",
+        "confirmWorkflow": "Xác nhận Workflow",
+        "suggestedWorkflow": "Workflow Đề Xuất",
+        "chatTab": "Chat",
+        "eventsTab": "Sự Kiện",
+        "historyTab": "Lịch Sử",
+        "workflowApproved": "Đã xác nhận workflow thành công!",
+        "approveButton": "Đồng Ý",
+        "aiCostCalculation": "Đang tính toán chi phí sử dụng AI..."
+      }

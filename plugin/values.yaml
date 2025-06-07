@@ -1,0 +1,56 @@
+      plugins:
+        repositories:
+          botkube:
+            url: https://github.com/kubeshop/botkube/releases/download/v1.13.0/plugins-index.yaml
+      communications:
+        default-group:
+          webhook:
+            enabled: false
+      settings:
+        clusterName: k3s-cluster
+        log:
+          level: info
+      executors:
+        k8s-default-tools:
+          botkube/kubectl:
+            enabled: false
+        flutter-executor:
+          enabled: true
+          plugins:
+            your-username/flutter-executor:
+              image: your-username/flutter-executor:latest
+              config: {}
+          resources:
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+        ai-manager:
+          enabled: true
+          plugins:
+            your-username/ai-manager:
+              image: your-username/flutter-executor:latest
+              config: {}
+          resources:
+            limits:
+              cpu: "300m"
+              memory: "512Mi"
+            requests:
+              cpu: "150m"
+              memory: "256Mi"
+      service:
+        enabled: true
+        port: 8080
+        additionalPorts:
+          - name: ai-manager
+            port: 8081
+            targetPort: 8081
+      ingress:
+        enabled: true
+        hosts:
+          - host: botkube.your-vps-ip.nip.io
+            paths:
+              - path: /
+                pathType: Prefix

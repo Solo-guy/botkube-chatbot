@@ -1,0 +1,8 @@
+{
+  "@@locale": "en",
+  "appTitle": "Botkube Flutter Connector",
+  "helloWorld": "Hello, World!",
+  "@helloWorld": {
+    "description": "A simple greeting message."
+  }
+}

@@ -1,0 +1,78 @@
+# Plugin directory .dockerignore
+# ---------------------------
+
+# Version control
+.git/
+.github/
+.gitignore
+**/.git/
+
+# Development and testing
+test/
+tests/
+*_test.go
+**/*_test.go
+**/test/
+**/tests/
+
+# Go specific
+**/debug
+**/release
+**/tmp
+go.work
+go.work.sum
+vendor/
+
+# Environment files
+.env
+.env.*
+**/.env
+**/.env.*
+**/credentials.json
+**/keys.json
+**/secrets.json
+
+# IDE and editor
+.idea/
+.vscode/
+.cursor/
+**/.idea/
+**/.vscode/
+**/.cursor/
+*.swp
+*.swo
+*~
+*.iml
+
+# Build artifacts
+bin/
+**/bin/
+*.exe
+*.dll
+*.so
+*.dylib
+*.out
+*.test
+
+# Generated and temporary files
+**/*.log
+**/logs/
+**/tmp/
+**/*.tmp
+**/*.bak
+
+# Database files
+**/cockroach-data/
+**/cockroach-temp*/
+
+# Documentation
+docs/
+**/docs/
+*.md
+!README.md
+
+# OS specific
+.DS_Store
+**/.DS_Store
+Thumbs.db
+Desktop.ini

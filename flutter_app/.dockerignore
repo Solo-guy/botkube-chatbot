@@ -1,0 +1,94 @@
+# Flutter app .dockerignore file
+# --------------------------
+
+# Development and version control
+.git/
+.github/
+.gitignore
+test/
+tests/
+
+# Flutter/Dart specific
+# Temporary build files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+.pub-cache/
+build/
+**/build/
+**/generated/
+
+# Platform specific folders
+# Keep these lines if building a web-only Docker image
+# Comment out specific platforms you want to include in the build
+ios/
+android/
+linux/
+windows/
+macos/
+
+# Keep web/ folder for web builds, comment the next line for web Docker builds
+# web/
+
+# Generated files
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+**/*.g.dart
+**/*.freezed.dart
+**/*.mocks.dart
+
+# Environment and configuration
+.env
+.env.*
+**/.env
+**/.env.*
+**/config/local.yaml
+**/credentials.json
+**/keys.json
+
+# IDE and editor
+.idea/
+.vscode/
+.cursor/
+**/.idea/
+**/.vscode/
+**/.cursor/
+*.iml
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+**/logs/
+**/*.log
+tmp/
+temp/
+**/tmp/
+**/*.tmp
+**/*.bak
+
+# OS specific
+.DS_Store
+**/.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Debug and testing
+coverage/
+**/*.lcov
+**/doc/api/
+
+# Build artifacts
+*.apk
+*.aab
+*.ipa
+*.app
+**/*.dill
+**/*.dill.track.dill
+
+# Misc
+**/.symlinks/
+**/.metadata

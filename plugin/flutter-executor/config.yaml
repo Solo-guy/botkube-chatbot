@@ -1,0 +1,33 @@
+# Cấu hình cho plugin Flutter Executor
+# File này chứa thông tin cần thiết để xác thực người dùng và kết nối cơ sở dữ liệu
+
+# Danh sách người dùng và vai trò tương ứng
+users:
+  user1: admin
+  user2: user
+
+# Cấu hình cho JWT (dùng để xác thực với REST API)
+jwt:
+  secret: "QAlcbi1Q7LUQVqyhmw2T2b4uM4l9MPjoEnNZn0invA8" # Khóa bí mật để tạo JWT
+
+# Cấu hình server
+server:
+  port: 8080 # Cổng mà server sẽ chạy
+
+# Cấu hình kết nối CockroachDB để lưu trữ lịch sử chat và thông tin người dùng
+cockroach:
+  host: "localhost" # Địa chỉ host của CockroachDB
+  port: 26257 # Cổng kết nối CockroachDB
+  user: "admin" # Tên người dùng CockroachDB
+  password: "Asd123456@" # Mật khẩu CockroachDB
+  database: "chat_history" # Tên cơ sở dữ liệu để lưu trữ
+
+# Cấu hình bảo mật cho lệnh
+security:
+  autoExecute: false # Tự động thực thi lệnh từ AI (true) hoặc yêu cầu xác nhận từ người dùng (false)
+  allowedCommands: # Danh sách các lệnh được phép thực thi
+    - "get"
+    - "describe"
+    - "logs"
+    # - "delete" # Bỏ comment để cho phép delete sau khi kiểm tra bảo mật
+    # - "exec"   # Bỏ comment để cho phép exec sau khi kiểm tra bảo mật

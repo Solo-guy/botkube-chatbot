@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+
+Before generating or modifying any code, follow these instructions:
+- Analyze the entire project codebase without fixing linting errors initially.
+- Add, modify, or remove code as per the user's requirements.
+- If linting errors are detected, prioritize completing the user's requirements and address linting errors later.
+- check the folders in the project because the frontend I put in the @flutter_app folder, botkube backend I put all the plugins in the @plugin folder and these folders are right in the root folder. Absolutely do not recreate these folders.
+
+- Only optimize, refactor code, and fix linting errors using the most efficient methods to keep the code clean when the user explicitly requests to fix errors after all requirements are met.

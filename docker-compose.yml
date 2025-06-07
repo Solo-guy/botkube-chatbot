@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  backend-flutter-executor:
+    build:
+      context: ./plugin # Thư mục chứa Dockerfile cho backend
+      dockerfile: Dockerfile # Dockerfile nằm trong plugin
+    image: lansingaudio/botkube-flutter-executor:latest
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./flutter_app # Thư mục chứa Dockerfile cho frontend
+      dockerfile: Dockerfile # Dockerfile nằm trong flutter-app
+    image: lansingaudio/botkube-frontend:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - backend-flutter-executor
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

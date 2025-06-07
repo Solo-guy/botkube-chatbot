@@ -1,0 +1,45 @@
+# Cấu hình cho plugin AI Manager
+# File này chứa các thông tin cần thiết để kết nối với các dịch vụ AI và cơ sở dữ liệu
+
+# Cấu hình cho các mô hình AI
+ai:
+  openai:
+    apiKey: "your-openai-key-here" # Khóa API cho OpenAI
+  gemini:
+    apiKey: "your-gemini-key" # Khóa API cho Gemini
+  claude:
+    apiKey: "your-claude-key" # Khóa API cho Claude
+  llama:
+    apiKey: "your-llama-key" # Khóa API cho Llamacle
+  grok:
+    apiKey: "xai-ciuKG0xqmhDcJ1dKo1yWrnU1Nl2hyryv1OtbSb77VFFXOrb3n9usiBxHZopQtKqYYKfmMSnhhAHTbf2j" # Thay thế với API key của bạn (phải bắt đầu bằng xai-)
+  mistral:
+    apiKey: "your-mistral-key" # Khóa API cho Mistral
+  cohere:
+    apiKey: "your-cohere-key" # Khóa API cho Cohere
+  stableDiffusion:
+    apiKey: "your-stable-diffusion-key" # Khóa API cho Stable Diffusion
+  minipcm:
+    endpoint: "http://localhost:8082/minipcm" # Endpoint cho MiniPCM (chạy cục bộ hoặc remote)
+  selectedModel: "grok" # Mô hình AI được chọn (openai, gemini, claude, llama, grok, mistral, cohere, stableDiffusion, minipcm)
+
+# Cấu hình cho JWT (dùng để xác thực với REST API)
+jwt:
+  secret: "QAlcbi1Q7LUQVqyhmw2T2b4uM4l9MPjoEnNZn0invA8" # Khóa bí mật để tạo JWT - phải giống với flutter-executor
+  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwicm9sZSI6ImFkbWluIn0.8Ni1kE_9P10RogeX1nxJzTUzkXMXUmyWx0CME_VN8OM" # Token JWT được tạo với cùng secret key
+
+# Cấu hình kết nối PostgreSQL để lưu trữ lịch sử chat và sự kiện
+postgres:
+  host: "localhost" # Địa chỉ host của PostgreSQL
+  port: 5432 # Cổng kết nối PostgreSQL
+  user: "postgres" # Tên người dùng PostgreSQL
+  password: "your-postgres-password" # Mật khẩu PostgreSQL
+  database: "chat_history" # Tên cơ sở dữ liệu để lưu trữ
+
+# Cấu hình kết nối CockroachDB để lưu trữ lịch sử chat và sự kiện
+cockroach:
+  host: "localhost" # Địa chỉ host của CockroachDB
+  port: 26257 # Cổng kết nối CockroachDB
+  user: "admin" # Tên người dùng CockroachDB
+  password: "Asd123456@" # Mật khẩu CockroachDB
+  database: "chat_history" # Tên cơ sở dữ liệu để lưu trữ - phải giống với flutter-executor

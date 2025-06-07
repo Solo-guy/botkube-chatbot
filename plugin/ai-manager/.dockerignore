@@ -1,0 +1,61 @@
+# AI Manager plugin .dockerignore
+# -----------------------------
+
+# Go build and binary files
+ai-manager
+ai-manager.exe
+bin/
+debug/
+release/
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Environment
+.env
+.env.*
+*.env
+credentials.json
+keys.json
+secrets.json
+
+# Development files
+*_test.go
+test/
+tests/
+*.test
+
+# Go temporary
+go.work
+go.work.sum
+/vendor/
+
+# IDE
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+nohup.out
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Documentation, except the README
+*.md
+!README.md

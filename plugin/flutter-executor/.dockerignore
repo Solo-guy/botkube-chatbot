@@ -1,0 +1,64 @@
+# Flutter Executor plugin .dockerignore
+# ----------------------------------
+
+# Go build and binary files
+flutter-executor
+flutter-executor.exe
+bin/
+debug/
+release/
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Environment
+.env
+.env.*
+*.env
+
+# Development files
+*_test.go
+test/
+tests/
+*.test
+
+# Go temporary
+go.work
+go.work.sum
+/vendor/
+
+# IDE
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+nohup.out
+
+# Database related
+/cockroach-data/
+/cockroach-temp*/
+**/cockroach-data/
+**/cockroach-temp*/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Documentation, except the README
+*.md
+!README.md
